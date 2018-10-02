@@ -9,3 +9,19 @@ img {
 h3 {
 	text-decoration: underline #000000;
 }
+
+
+.boutonActivtrue {
+  animation: App-logo-spin infinite 1s linear;
+  height: 180px;
+}
+
+.boutonActivfalse{
+  animation: App-logo-spin infinite 10000s linear;
+  height: 180px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

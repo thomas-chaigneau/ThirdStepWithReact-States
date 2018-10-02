@@ -7,12 +7,9 @@ import Quotes from "./Quotes";
 
 class App extends Component {
   render() {
+    
     return (
       <div className="App">
-
-        <header className="App-header">
-          <img src="http://www.freelogovectors.net/wp-content/uploads/2015/06/The-Simpsons-Logo.png"  alt="logo" />
-        </header>
 
         <Working on />
 

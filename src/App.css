@@ -2,9 +2,14 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.App-logo.true {
+  animation: App-logo-spin infinite 50s linear;
+  height: 180px;
+}
+
+.App-logo.false {
+  animation: App-logo-spin infinite 5s linear;
+  height: 180px;
 }
 
 .App-header {
@@ -29,6 +34,5 @@
 
 h2 {
   margin-top: 150px;
-
   background-color: rgba(240,240,240,0.8)
 }

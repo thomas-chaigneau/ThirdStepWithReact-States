@@ -13,14 +13,23 @@ class Working extends Component {
 
 	change = () => {
 		this.setState({ working: !this.state.working });
+		
+		
 	}
 
 	render() {
 		const working = this.state.working ? 'Beer' : 'Working';
+		const classLogoHeader = "boutonActiv"+this.state.working.toString()
+		console.log(classLogoHeader)
 
 		return (
 
 	      <div>
+
+	       	<header className="App-header">
+          		<img className={classLogoHeader}  src="http://www.freelogovectors.net/wp-content/uploads/2015/06/The-Simpsons-Logo.png"  alt="logo" />
+       	 	</header>
+
 	      	<h3> Homer is he Working or Drinking Beer ?</h3>
 	      	<div>
 	        	<button onClick={this.change} >{working}</button>
