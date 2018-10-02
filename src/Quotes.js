@@ -1,7 +1,7 @@
 import React from "react";
 import Quote from "./Quote"
 // src/Quotes.js
-const truc = [
+const quotes = [
   {
     quote:
       "Facts are meaningless. You could use facts to prove anything that's even remotely true.",
@@ -34,9 +34,9 @@ const Quotes = () => (
 
   <div>
 
-    {truc.map( (pgg, papa) => (
+    {quotes.map( (quote, id) => (
 
-      <Quote {...yo}  key={papa} />
+      <Quote {...quote}  key={id} />
     
     ))}
   </div>
