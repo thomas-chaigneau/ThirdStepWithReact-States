@@ -8,19 +8,27 @@ const image = { true : "http://www.guidedesbieres.com/photos/homer-simpsons-duff
 class Working extends Component {
 	constructor() {
 		super();
-		this.state = {working: false};
+		this.state = {
+						working: false,
+						countBeers: 0,
+						countWorkingSec: 0
+					};
 	};
 
 	change = () => {
-		this.setState({ working: !this.state.working });
-		
+		this.setState({ working: !this.state.working});
+
+		if (this.state.working ===true) return this.setState({ countBeers : this.state.countBeers +1});
+		else if (this.state.working ===false) return this.setState({ countWorkingSec :this.state.countWorkingSec +1});
 		
 	}
 
 	render() {
 		const working = this.state.working ? 'Beer' : 'Working';
 		const classLogoHeader = "boutonActiv"+this.state.working.toString()
-		console.log(classLogoHeader)
+		console.log((this.state.working == 'Beer'))
+		console.log(this.state.working == 'Working')
+		console.log(this.state.working)
 
 		return (
 
@@ -37,6 +45,11 @@ class Working extends Component {
 	        <div>
 	        	<img  src={image[this.state.working]} alt="" />
 	        </div>
+	        <div>
+	        	<p>Homer dring {this.state.countBeers} Beers</p>
+	        	<p>and work for {this.state.countWorkingSec} seconds...</p>
+	        </div>
+
 	      </div>
 	    );
 	}
