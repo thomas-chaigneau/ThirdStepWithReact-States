@@ -9,8 +9,8 @@ class Working extends Component {
 	constructor() {
 		super();
 		this.state = {
-						working: false,
-						countBeers: 0,
+						working: true,
+						countBeers: 1,
 						countWorkingSec: 0
 					};
 	};
@@ -18,13 +18,13 @@ class Working extends Component {
 	change = () => {
 		this.setState({ working: !this.state.working});
 
-		if (this.state.working ===true) return this.setState({ countBeers : this.state.countBeers +1});
-		else if (this.state.working ===false) return this.setState({ countWorkingSec :this.state.countWorkingSec +1});
+		if (this.state.working ===false) return this.setState({ countBeers : this.state.countBeers +1});
+		else if (this.state.working ===true) return this.setState({ countWorkingSec :this.state.countWorkingSec +0.5});
 		
 	}
 
 	render() {
-		const working = this.state.working ? 'Beer' : 'Working';
+		const working = this.state.working ? 'Working' : 'Beer';
 		const classLogoHeader = "boutonActiv"+this.state.working.toString()
 		console.log((this.state.working == 'Beer'))
 		console.log(this.state.working == 'Working')
