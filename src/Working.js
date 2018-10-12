@@ -25,18 +25,16 @@ class Working extends Component {
 
 	render() {
 		const working = this.state.working ? 'Working' : 'Beer';
-		const classLogoHeader = "boutonActiv"+this.state.working.toString()
-		console.log((this.state.working == 'Beer'))
-		console.log(this.state.working == 'Working')
-		console.log(this.state.working)
+		// const classLogoHeader = this.state.working.toString()
+		// console.log((this.state.working === 'Beer'))
+		// console.log(this.state.working === 'Working')
+		// console.log(this.state.working)
 
 		return (
 
 	      <div>
 
-	       	<header className="App-header">
-          		<img className={classLogoHeader}  src="http://www.freelogovectors.net/wp-content/uploads/2015/06/The-Simpsons-Logo.png"  alt="logo" />
-       	 	</header>
+	       
 
 	      	<h3> Homer is he Working or Drinking Beer ?</h3>
 	      	<div>
